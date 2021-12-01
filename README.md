@@ -3,5 +3,5 @@
 </p>
 <h1 align="center" > Computer Vision Course </h1>
 <h3 align="center">
-@ Faculty of Computer & Information Sciences 'Mansoura University' for 4th Year
+Python Code for Computer Vision Course @ Faculty of computer and information Sciences ' MU ' for the '4th Year'
 </h3>
