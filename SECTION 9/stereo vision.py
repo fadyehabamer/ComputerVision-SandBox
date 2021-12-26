@@ -6,7 +6,7 @@ minDisparity = 16
 numDisparities = 192 - minDisparity
 blockSize = 5
 
-P1 = 600
+P1 = 700
 
 P2 = 2400
 
