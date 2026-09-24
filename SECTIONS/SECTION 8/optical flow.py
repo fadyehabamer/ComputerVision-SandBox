@@ -1,5 +1,10 @@
 import cv2
 import numpy as np
+import os
+
+# the sample files (../logo.png, ../video.mp4, 1.jpg, ...) are relative to this folder,
+# so run from here no matter which directory the script is started from
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # The video feed is read in as
 # a VideoCapture object
@@ -34,6 +39,8 @@ mask = np.zeros_like(old_frame)
 
 while 1:
     ret, frame = cap.read()
+    if not ret:  # end of the video
+        break
     frame_gray = cv2.cvtColor(frame,
                               cv2.COLOR_BGR2GRAY)
 
@@ -49,8 +56,9 @@ while 1:
 
     # draw the tracks
     for i, (new, old) in enumerate(zip(good_new, good_old)):
-        a, b = new.ravel()
-        c, d = old.ravel()
+        # drawing functions need integer pixel coordinates
+        a, b = map(int, new.ravel())
+        c, d = map(int, old.ravel())
         mask = cv2.line(mask,
                         (a, b),
                         (c, d),
@@ -63,7 +71,7 @@ while 1:
     img = cv2.add(frame, mask)
     cv2.imshow('frame', img)
 
-    k = cv2.waitkey(25)
+    k = cv2.waitKey(25)
     if k == 27:
         break
     # Updating Previous frame and points

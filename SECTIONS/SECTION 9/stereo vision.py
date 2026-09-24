@@ -1,5 +1,10 @@
 import cv2
 import numpy as np
+import os
+
+# the sample files (../logo.png, ../video.mp4, 1.jpg, ...) are relative to this folder,
+# so run from here no matter which directory the script is started from
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 minDisparity = 16
 
@@ -21,7 +26,7 @@ imgL = cv2.imread('1.jpg')
 imgR = cv2.imread('2.jpg')
 
 
-def update():
+def update(val=0):  # trackbar callbacks receive the new position
     stereo.setBlockSize(cv2.getTrackbarPos('blockSize', 'Disparity'))
 
     disparity = stereo.compute(imgL, imgR).astype(np.float32) / 16.0

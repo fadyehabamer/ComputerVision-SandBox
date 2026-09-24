@@ -1,5 +1,10 @@
 import cv2
 import numpy as np
+import os
+
+# the sample files (../logo.png, ../video.mp4, 1.jpg, ...) are relative to this folder,
+# so run from here no matter which directory the script is started from
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # filename = '../logo.png'
 # img = cv2.imread(filename)
@@ -37,7 +42,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 corners = cv2.goodFeaturesToTrack(gray, 25, 0.01, 10)
 # corners will be represented in an array with float numbers
-corners = np.int0(corners)
+corners = np.intp(corners)  # np.int0 was an alias of np.intp and was removed in NumPy 2.0
 
 
 # loop through values in corner array
