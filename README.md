@@ -17,8 +17,8 @@ Lecture Notes & Python Code for Computer Vision Course @ Faculty of computer and
 | `SECTIONS/SECTION 2` | Colour spaces, thresholding, resizing, blurring, filters, Sobel/Laplacian/Canny edges |
 | `SECTIONS/SECTION 3` | Contours and Hough line detection |
 | `SECTIONS/SECTION 4` | Drawing: lines, rectangles, circles, ellipses, text |
-| `SECTIONS/SECTION 5` | Shi-Tomasi corner detection (`goodFeaturesToTrack`) |
-| `SECTIONS/SECTION 6` | FAST keypoints |
+| `SECTIONS/SECTION 5` | Harris and Shi-Tomasi corner detection |
+| `SECTIONS/SECTION 6` | SIFT and FAST keypoints |
 | `SECTIONS/SECTION 7` | ORB, BRIEF and SIFT features |
 | `SECTIONS/SECTION 8` | Lucas-Kanade optical flow on `SECTIONS/video.mp4` |
 | `SECTIONS/SECTION 9` | Stereo disparity (StereoSGBM) from `1.jpg` / `2.jpg` |
