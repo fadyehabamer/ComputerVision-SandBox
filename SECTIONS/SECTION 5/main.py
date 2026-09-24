@@ -37,7 +37,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 corners = cv2.goodFeaturesToTrack(gray, 25, 0.01, 10)
 # corners will be represented in an array with float numbers
-corners = np.int0(corners)
+corners = np.intp(corners)  # np.int0 was an alias of np.intp and was removed in NumPy 2.0
 
 
 # loop through values in corner array
