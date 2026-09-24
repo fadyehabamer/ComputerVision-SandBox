@@ -1,4 +1,9 @@
 import cv2
+import os
+
+# the sample files (../logo.png, ../video.mp4, 1.jpg, ...) are relative to this folder,
+# so run from here no matter which directory the script is started from
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # to draw line use following formula
 # cv2.line(img,point1,point2,color,thickness)

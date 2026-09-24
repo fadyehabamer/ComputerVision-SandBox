@@ -1,4 +1,9 @@
 import cv2 as cv
+import os
+
+# the sample files (../logo.png, ../video.mp4, 1.jpg, ...) are relative to this folder,
+# so run from here no matter which directory the script is started from
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 img = cv.imread('../logo.png', 0)
 

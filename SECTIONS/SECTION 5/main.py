@@ -1,5 +1,10 @@
 import cv2
 import numpy as np
+import os
+
+# the sample files (../logo.png, ../video.mp4, 1.jpg, ...) are relative to this folder,
+# so run from here no matter which directory the script is started from
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # filename = '../logo.png'
 # img = cv2.imread(filename)
