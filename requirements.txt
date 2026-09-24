@@ -1,0 +1,11 @@
+# Python packages used by the scripts in SECTIONS/ (derived from their imports)
+numpy
+# the contrib build is needed for cv2.xfeatures2d (StarDetector / BRIEF in SECTION 7);
+# it also contains everything from the plain opencv-python package (install only one of the two)
+opencv-contrib-python>=4.4
+
+# Optional, only for snippets that are commented out in SECTION 2 (edge detection / derivatives):
+# scipy
+# matplotlib
+# Optional, for BASICS/modules.py:
+# camelcase
