@@ -21,7 +21,7 @@ imgL = cv2.imread('1.jpg')
 imgR = cv2.imread('2.jpg')
 
 
-def update():
+def update(val=0):  # trackbar callbacks receive the new position
     stereo.setBlockSize(cv2.getTrackbarPos('blockSize', 'Disparity'))
 
     disparity = stereo.compute(imgL, imgR).astype(np.float32) / 16.0
